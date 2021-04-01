@@ -1,0 +1,6 @@
+1) background - თვისებები
+https://www.w3schools.com/css/css_background.asp
+2) margin/padding
+3) display - თვისებები
+https://www.w3schools.com/css/css_display_visibility.asp
+4) position  - თვისებები

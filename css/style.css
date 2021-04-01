@@ -1,0 +1,151 @@
+body{
+    margin: 0;
+    
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.card{
+ 
+    
+    position: relative;
+    padding: 20px;
+    background-color: #fff;
+}
+ 
+.card span{
+ position: absolute;
+ background-color: cornflowerblue;
+ color: #fff;
+ display: inline-block;
+ padding: 7px;
+ right: 17px;
+ font-size: 12px;
+ border-radius: 3px;
+ top: 0;
+}
+
+.card span::before{
+    content: "";
+    background-color: cornflowerblue;
+    position: absolute;
+    left: -4px;
+    height: 7px;
+    width: 58%;
+    transform: skewX(
+-29deg
+);
+    top: -2px;
+}
+
+.card span::after{
+    content: "";
+    background-color: cornflowerblue;
+    position: absolute;
+    right: -4px;
+    height: 7px;
+    width: 50%;
+    transform: skewX(
+29deg
+);
+    top: -2px;
+}
+
+.card img{
+    max-width: 100%;
+    margin: auto;
+    display: block;
+}
+
+ 
+
+.card-body {
+    text-align: center;
+
+}
+
+.card-body h1{
+    font-size: 17px;
+} 
+
+.absssd{
+    height: 350px;
+}
+
+.absssd::after{
+content: "after";
+
+}
+
+.absssd::before{
+    content: "before";
+    
+
+}
+
+.content{
+    width: 1140px;
+    margin: auto;
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-3{
+    padding: 0 15px;
+    width: 33.33333%;
+}
+
+nav{
+    background-color: #fff;
+    box-shadow: 7px 7px 27px #302d2d24;
+ 
+}
+
+.navbar li{
+    display: inline-block;
+}
+.navbar{ 
+    padding: 0;
+    margin-left: auto;
+    padding-left: 0;
+}
+
+.navbar li a {
+    display: inline-block;
+    padding: 15px 12px;
+}
+
+.product{
+    margin:0 0 50px 0;
+    padding:  0 0 30px 0;
+    background: #f7f8f8;
+}
+
+.discproduct{
+    padding: 30px 0;
+    background: #ebfbfb;
+}
+
+nav svg {
+    
+    padding-left: 14px;
+
+}
+
+@media(max-width:800px){
+    .col-3{
+        width: 100%;
+    }
+}
