@@ -1,151 +1,87 @@
+@font-face {
+    font-family: alk;
+    src: url('../font/alk-sanet-webfont.woff');
+}
+
+
 body{
     margin: 0;
-    
 }
 
 *{
     box-sizing: border-box;
 }
 
-a{
-    text-decoration: none;
-}
-
 .card{
- 
-    
-    position: relative;
-    padding: 20px;
-    background-color: #fff;
-}
- 
-.card span{
- position: absolute;
- background-color: cornflowerblue;
- color: #fff;
- display: inline-block;
- padding: 7px;
- right: 17px;
- font-size: 12px;
- border-radius: 3px;
- top: 0;
-}
-
-.card span::before{
-    content: "";
-    background-color: cornflowerblue;
-    position: absolute;
-    left: -4px;
-    height: 7px;
-    width: 58%;
-    transform: skewX(
--29deg
-);
-    top: -2px;
-}
-
-.card span::after{
-    content: "";
-    background-color: cornflowerblue;
-    position: absolute;
-    right: -4px;
-    height: 7px;
-    width: 50%;
-    transform: skewX(
-29deg
-);
-    top: -2px;
+    border: 1px solid red;
+    width: 320px;
+    margin: auto;
+    margin-top: 50px;
+    max-width: 100%;
+    padding: 30px;
 }
 
 .card img{
-    max-width: 100%;
-    margin: auto;
-    display: block;
+    width: 100%;
 }
 
- 
-
-.card-body {
-    text-align: center;
-
+.card h4{
+ color: green;
+ font-size: 14px;
+ font-family: alk;
+ text-align: center;
+ line-height: 1.2;
+ letter-spacing: 0;
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ padding: 0 7px;
+ /* text-shadow: 3px 3px 3px #000000; */
 }
 
-.card-body h1{
-    font-size: 17px;
-} 
-
-.absssd{
-    height: 350px;
+.card p {
+    text-transform: capitalize;
 }
 
-.absssd::after{
-content: "after";
-
+p{
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
-.absssd::before{
-    content: "before";
+header{
+      display: flex;
+      height: 550px;
+     /* background-color: slategrey; */
+     /* background: linear-gradient(180deg, rgba(9,8,9,1) 0%, rgba(13,14,15,1) 21%, rgba(23,34,38,1) 43%, rgba(4,18,20,0.9164040616246498) 93%); */
+     background-image: url('https://www.teahub.io/photos/full/7-74931_download-nature-wallpaper-in-hd-for-mobile.jpg');
+     background-position: center;
+     background-size: cover;
     
-
+     /* ასწორებს ჰორიზონტალურ პოზიციაზე */
+     justify-content: center;
+     /* ასწორებს ვერტიკალურ პოზიციაზე */
+     align-items: flex-end;
+     
+     background-repeat: no-repeat;
 }
 
-.content{
-    width: 1140px;
-    margin: auto;
+.textbox{
+    background: linear-gradient(180deg, rgba(9,8,9,1) 0%, rgba(13,14,15,1) 21%, rgba(23,34,38,1) 43%, rgba(4,18,20,0.9164040616246498) 93%);
+    font-size: 14px;
+    margin-bottom: 30px;
+    font-family: alk;
+    width: 400px;
     max-width: 100%;
-    padding: 0 15px;
+ 
+    color: #fff;
 }
 
-.row{
+
+.tesdiv{
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
+    border: 1px solid red;
 }
 
-.col-3{
-    padding: 0 15px;
-    width: 33.33333%;
-}
-
-nav{
-    background-color: #fff;
-    box-shadow: 7px 7px 27px #302d2d24;
- 
-}
-
-.navbar li{
-    display: inline-block;
-}
-.navbar{ 
-    padding: 0;
-    margin-left: auto;
-    padding-left: 0;
-}
-
-.navbar li a {
-    display: inline-block;
-    padding: 15px 12px;
-}
-
-.product{
-    margin:0 0 50px 0;
-    padding:  0 0 30px 0;
-    background: #f7f8f8;
-}
-
-.discproduct{
-    padding: 30px 0;
-    background: #ebfbfb;
-}
-
-nav svg {
-    
-    padding-left: 14px;
-
-}
-
-@media(max-width:800px){
-    .col-3{
-        width: 100%;
-    }
+.tesdiv h1{
+ display: inline-block;
 }
