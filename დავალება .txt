@@ -1,6 +1,3 @@
-1) background - თვისებები
-https://www.w3schools.com/css/css_background.asp
-2) margin/padding
-3) display - თვისებები
-https://www.w3schools.com/css/css_display_visibility.asp
-4) position  - თვისებები
+1) დავალება ფორმა (https://assets.materialup.com/uploads/1d31aaa6-3160-441f-9b59-4e2a92138b46/preview.gif)
+2) დავალება ვიდეო ბექგრაუნდი (https://images.squarespace-cdn.com/content/v1/5a6b8365b0786974d9573275/1579753629522-2QVCYALIUGWMQN16IQR3/ke17ZwdGBToddI8pDm48kPO3q8cuL8UeABXV8_0ruBcUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKc_Nv2Ih1GJe8Ye9qQQjqHA5BAySE9gOqWNuggann8IYQxSZg89J6WVzbsxN_AQT8C/squarespace-video-banner.gif?format=1000w)
+3) დავალება ქარდის ჰოვერი (https://cdn.dribbble.com/users/452826/screenshots/2733692/card.gif)
