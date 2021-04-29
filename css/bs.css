@@ -1,10 +1,75 @@
+@font-face {
+    font-family: alk;
+    src: url('../font/alk-sanet-webfont.woff');
+}
+
+
 body{
     margin: 0;
+    background-color: dodgerblue;
     
 }
 
 *{
     box-sizing: border-box;
+}
+
+nav {
+    background-color: #fff;
+}
+
+a{
+    font-family: alk;
+    color: rgb(18, 17, 36);
+    text-decoration: none;
+}
+
+.content{
+    padding: 0 15px;
+    margin: auto;
+    max-width: 1140px;  
+}
+
+.navbar ul{
+    list-style: none;
+}
+
+.navbar ul li{
+    display: inline-block;
+}
+
+.navbar ul li a{
+    display: inline-block;
+    padding: 15px 13px;
+}
+
+
+.flexbox:first-child ul{
+    margin-left: 60px;
+ }
+
+.navbar ul:last-child{
+   margin-left: auto;
+}
+
+
+.navbar ul:last-child li a{
+      border: 1px solid #ccc;
+      border-radius: 7px;
+ }
+
+ .navbar ul:last-child li:first-child a{
+    color: #fff;
+    margin-right: 12px;
+    border: none;
+    background-color: rgb(56, 74, 241);
+}
+ 
+
+
+
+.flexbox{
+    display: flex;
 }
 
 /* div{
@@ -154,4 +219,37 @@ animation-timing-function: cubic-bezier(ease-in, ease-in-out, ease-out); */
 
 section{
      background-color: red;
+}
+
+@media (max-width:870px) {
+    .flexbox{
+        display: block;
+    }
+
+    .navbar ul li {
+        display: block;
+        text-align: center;
+    }
+
+    .flexbox:first-child ul {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .navbar ul li a {
+    
+        padding: 15px 0px;
+    }
+
+    .navbar ul:last-child li a {
+     margin: 15px 0;
+     width: 100%;
+}
+
+.flexbox img{
+    display: block;
+    margin: auto;
+    padding-top: 30px;
+}
+
 }
