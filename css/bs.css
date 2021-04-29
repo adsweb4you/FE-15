@@ -101,9 +101,9 @@ div::before{
     background-color: red;
 } */
 
-p{
+/* p{
     padding-left: 40px;
-    /* background-color: chartreuse; */
+   background-color: chartreuse;  
 }
 
 p:lang(en){
@@ -112,17 +112,17 @@ p:lang(en){
 
 p:lang(ka){
     font-size: 22px;
-}
+} */
 
  /* p:nth-child(odd){
      background-color: chartreuse;
      padding: 7px;
  } */
 
- p:not(.red){
+ /* p:not(.red){
     
     background-color: chartreuse;
-}
+} */
 
 button[type="button"]{
     background-color: red;
@@ -219,6 +219,25 @@ animation-timing-function: cubic-bezier(ease-in, ease-in-out, ease-out); */
 
 section{
      background-color: red;
+}
+
+header{
+    background-image:url('https://i.redd.it/tn0k20exrnb51.jpg') ;
+    background-position: center;
+    background-size: cover;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header h1{
+    margin-top: 0;
+}
+
+.text{
+    width: 40%;
+
 }
 
 @media (max-width:870px) {
