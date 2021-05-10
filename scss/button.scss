@@ -1,0 +1,8 @@
+ 
+
+@mixin  colorbtn($color) { 
+   border-radius: 7px;
+   outline: none;
+   border:none;
+  background-color: $color;
+}

@@ -1,0 +1,90 @@
+@use 'button.scss';
+
+$rounded-sm:7px;
+$rounded-lg:15px;
+$pad-7:14px;
+
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card{
+  width: 350px;
+  position: relative;
+  border-radius: $rounded-sm;
+  margin: {
+    top:50px;
+    left: auto;
+    right: auto;
+  }
+  box-shadow: 7px 7px 7px #ccc;
+
+  span{
+    @include center();
+    display: inline-block;
+    border-radius: $rounded-lg;
+    background-color: crimson;
+    color: #fff;
+    padding: 7px 7px 7px 7px;
+  }
+   
+  img{
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .body{
+    padding: 13px;
+    text-align: center;
+  }
+
+  .footer{
+    display: flex;
+    padding: $pad-7 / 2;
+    justify-content: space-between;
+    a{
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+      padding: 7px;
+      border-radius: 3px;
+     &:first-child{
+       background-color: cornflowerblue;
+     }
+
+
+     &:last-child{
+      background-color: rgb(5, 11, 20);
+    }
+
+    }
+  }
+
+  transition: all 0.9s;
+
+  &:hover{
+    transform: scale(1.1);
+  }
+
+}
+
+
+%toolbelt {
+  padding: 16px 0;
+}
+
+ .red{
+   @include  button.colorbtn(#ccc);
+ }
+
+ .green{
+  @include  button.colorbtn(green);
+}
+
+.blue{
+  @extend %toolbelt;
+  @include  button.colorbtn(blue);
+}

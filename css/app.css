@@ -1,0 +1,77 @@
+.card {
+  width: 350px;
+  position: relative;
+  border-radius: 7px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 7px 7px 7px #ccc;
+  transition: all 0.9s;
+}
+.card span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  border-radius: 15px;
+  background-color: crimson;
+  color: #fff;
+  padding: 7px 7px 7px 7px;
+}
+.card img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.card .body {
+  padding: 13px;
+  text-align: center;
+}
+.card .footer {
+  display: flex;
+  padding: 7px;
+  justify-content: space-between;
+}
+.card .footer a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 7px;
+  border-radius: 3px;
+}
+.card .footer a:first-child {
+  background-color: cornflowerblue;
+}
+.card .footer a:last-child {
+  background-color: #050b14;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+
+.blue {
+  padding: 16px 0;
+}
+
+.red {
+  border-radius: 7px;
+  outline: none;
+  border: none;
+  background-color: #ccc;
+}
+
+.green {
+  border-radius: 7px;
+  outline: none;
+  border: none;
+  background-color: green;
+}
+
+.blue {
+  border-radius: 7px;
+  outline: none;
+  border: none;
+  background-color: blue;
+}
+
+/*# sourceMappingURL=app.css.map */
