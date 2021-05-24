@@ -74,4 +74,43 @@
   background-color: blue;
 }
 
+
+
+.carousel-indicators [data-bs-target] {
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.carousel-item img{
+  height: 550px;
+  object-fit: cover;
+}
+
+.carts{
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  z-index: 99;
+}
+
+
+.tets{
+  height: 350px;
+}
+
+.carousel-item {
+  height: 550px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgmy {
+  background-color: #00000096;
+  border-radius: 57px !important;
+}
+ 
 /*# sourceMappingURL=app.css.map */
+
