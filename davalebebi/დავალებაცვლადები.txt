@@ -1,0 +1,9 @@
+1) შევქმნათ .js ფაილი 
+2) შევქმნათ 3 ცვლადი რომელსაც გამოვიტანთ console.log()_ში / ასევე html ში document.getElementById().innerHTML _ის 
+გამოყენებით 
+3) დაუმატეთ ცვლადები ერთმანეთს და გამოიტანეთ ჯამი (html_ში) (არასავალდებულო)
+
+
+-- რესურსები
+https://webschool.ge/js/1289
+https://www.w3schools.com/js/default.asp
