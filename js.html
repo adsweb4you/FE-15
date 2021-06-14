@@ -45,6 +45,13 @@ nav ul a{
 form{
     margin-top: 120px;
 }
+
+#output   {
+    transition: all .9s;
+    opacity: 0;
+}
+
+ 
  </style>
 </head> 
 <body>
@@ -81,6 +88,14 @@ form{
     <!-- <span></span> -->
 </p>
 
+<input type="text" onkeyup="upper(event)">
+
+
+<div id="user">
+
+</div>
+
+<button onclick="calculate()">ფასდაკლების გამოტანა</button>
    <script src="js/mine.js"></script>
 </body>
 </html>
