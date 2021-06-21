@@ -170,7 +170,222 @@ let arrfunc = (sakjd, sakfj, aslfk) => {
 
 }
 
-//  console.log()
-User.candelate("25")
+  //  console.log()
+  User.candelate("25")
  document.getElementById("sad");
+   
+
+//  array
+
+let animal = ["dog", "cat", "lion", "dog", "cow", "zazuna", 15 , 55, 60, 20];
+
+
+//animal.push([66, 77]); // ახალი ელემენტის ჩამატება მასივის ბოლოს
+//animal.unshift(12); // ახალი ელემენტის ჩამატება მასივის დასაწისში
+// animal.pop();// შლის ბოლო ელემენტს
+// animal.shift() // შლის მასივის პირველ ელემენტს
+//animal.slice(2) // შლის მასივის ელემენტებს თავიდან (პარამეტრის მიხედვით)
+//animal.splice(1, 2, "cat2"); // პირველი პარამეტრი აღნიშნავს საიდან უნდა დაიწყოს ჭრა, მეორე პარამეტრი რამდენი ელემენტი 
+//უნდა მოიჭრას , ელემენტის ჩამატება
+
+
+
+let findedname = animal.filter(findname);
+
+let retvalue = findedname[0];
+
+function  findname(array) {
+    return array == "zazuna";
+}
+
+
+function upper(val) {
+
  
+   let findedname = animal.filter((array) =>{
+    return array == val;
+   });
+
+//    if (findedname.length > 0) {
+//     document.getElementById("search").innerHTML  = findedname[0]
+//    }else{
+//     document.getElementById("search").innerHTML  = "ტექსტი ვერ მოიძებნა"
+//    }
+   
+    }
+
+
+
+  // user.innerHTML = animal[0]  + "<br>";
+//   user.innerHTML += animal[1] + "<br>";
+//   user.innerHTML += animal[2] + "<br>";
+//   user.innerHTML += animal[3] + "<br>";
+//   user.innerHTML += animal[4] + "<br>";
+//   user.innerHTML += animal[5] + "<br>";
+// console.log(animal.length)
+
+
+// for (let i = 0; i < animal.length; i++) {
+//     const element = animal[i];
+    
+//     user.innerHTML += `<p> ${element.replaceAll('a', '*')}  </p>`  ;
+// }
+
+
+//  let sus = document.getElementById("inp").value;
+
+ 
+
+ 
+
+// for (let s = 0; s < animal.length; s++){
+
+// }
+
+let stud = [
+    "testi",
+    25,
+    "testi2",
+    25,
+]
+
+
+let ages =  stud.filter(findage);
+
+function findage(stuts) {
+     return  stuts == 25;
+}
+
+
+
+
+
+
+for (let i = 0; i < ages.length; i++) {
+    const element = ages[i];
+    
+
+    document.getElementById("search").innerHTML += element;
+}
+
+
+let agess = [100, 20, 2000, 1002, 66, 870];
+
+let names = ["ანა", "ლანა", "სადსად"];
+
+let united = agess.concat(names);
+
+
+console.log(united);
+
+// თუ 1 წევრი მაინც აკმაყოფილებს პირობას
+let checkage = agess.some((arr) => {
+    return arr > 80;
+})
+
+// თუ ყველა  წევრი აკმაყოფილებს პირობას
+let checkswe = agess.every((arr) => {
+    return arr > 10;
+})
+
+// filter მსგავსია თუმცა აბრუნებს პირველივე ელემენტს მარცხნიდან რომელიც პირობას აკმაყოფილებს
+let fins = agess.find((arr) => {
+    return arr > 10;
+})
+
+console.log(agess.sort(fil).reverse()) ;
+
+function fil(a , b) {
+    return a - b;
+}
+
+// let newag  =  agess.forEach((els) => {
+//      return els * 2;
+//   })
+
+// let newag  = agess.map((els) => {
+//     return els * 2;
+// })
+
+// for (let l = 0; l < newag.length; l++) {
+//     const element = newag[l];
+    
+// console.log(element);
+// }
+
+
+
+
+let Product =  [
+    {name:"iphone 11", ram:"4GB", rom:"120GB", color:"black", screen:"6 inch", img:"https://assets.swappie.com/iPhone-11-Pro-space-gray-back.png", price:1500},
+    {name:"iphone 9", ram:"7GB", rom:"100GB", color:"red", screen:"5 inch", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX5LZSNhnqUR4PrY54mOc2P4AJVlrB0GJM2g&usqp=CAU", price:1000},
+    {name:"iphone 6", ram:"6GB", rom:"64GB", color:"blue", screen:"7 inch", img:"https://www.gizmochina.com/wp-content/uploads/2020/04/cats-500x500.jpg", price:1000},
+    {name:"iphone 6", ram:"7GB", rom:"16GB", color:"mate black", screen:"2 inch", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKtDOhInGBoBF0KsdF0f8cdBfUXoLHQcyQFw&usqp=CAU", price:1600},
+    {name:"iphone 12", ram:"84GB", rom:"80GB", color:"white", screen:"4 inch", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkXEE52sCLK1mdEzIRX1Zc3sXvb203svXmqw&usqp=CAU", price:280},
+    {name:"iphone 15 pro", ram:"49GB", rom:"90GB", color:"gold", screen:"7 inch", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_ICdjiWkMlF6VTuV3p9yQ6h9BuE0F0ZvAag&usqp=CAU", price:488},
+]
+
+
+let form = document.getElementById("search");
+
+// console.log(myprice);
+
+let viewprod = document.getElementById("prods");
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+  
+    let price_from = document.getElementById("price_from").value;
+    let price_to = document.getElementById("price_to").value;
+
+    let myprice  = Product.filter((produc) => {
+        return produc.price  >=  price_from && produc.price  <= price_to ;
+    })
+    
+     viewprod.innerHTML = '';
+    
+    myprice.forEach((arr) => {
+    
+    
+
+        viewprod.innerHTML += `<div class="col-md-4 mb-3"> <div class="card">
+      <img src="${arr.img}" class="card-img-top" alt="..." style="height:350px; object-fit:contain">
+      <div class="card-body">
+        <h5 class="card-title">${arr.name}</h5>
+        <p class="card-text">${arr.ram}</p>
+        <p class="card-text">${arr.rom}</p>
+        <p class="card-text">${arr.color}</p>
+        <p class="card-text">${arr.screen}</p>
+        <p class="badge bg-success">${arr.price} ₾</p>
+         
+        </div>
+      </div>
+    </div>` 
+    
+      
+    })
+
+})
+ 
+
+let newdate = new Date();
+
+
+newdate.setMonth((newdate.getMonth() + 1) + 1);
+newdate.setDate(newdate.getDate() + 5);
+// let spdata = newdate.toString().split(" ");
+
+// function trans() {
+//   if (spdata[0] == 'Sun') {
+//     return "კვირა"
+// }  
+// }
+
+
+console.log(newdate.getDate())
+
+
+// setInterval(() => {
+//      let time = new Date();
+//     document.getElementById("clock").innerHTML  = `${time.getDate()}/${time.getMonth() + 1}/${time.getFullYear()}| ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`;
+// }, 1000)

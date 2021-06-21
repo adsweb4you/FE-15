@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
  <style>
 
 body{
@@ -83,19 +84,49 @@ form{
   <button class="btn subm" type="button">გამოთვლა</button>
 </form> -->
 
-<p id="output">
-
+<!-- <p id="output">
+</p> 
     <!-- <span></span> -->
-</p>
+ 
 
-<input type="text" onkeyup="upper(event)">
+<!-- <input type="text" onkeyup="upper(this.value)">
 
 
 <div id="user">
 
 </div>
 
-<button onclick="calculate()">ფასდაკლების გამოტანა</button>
+<div id="search">
+    
+</div> -->
+
+<div class="container">
+
+    <form class="row" id="search">
+       
+        <div class="mb-3 col-md-4">
+          <label for="price_from" class="form-label">ფასი_დან</label>
+          <input type="number" class="form-control" id="price_from">
+        </div>
+        <div class="mb-3 col-md-4  ">
+            <label for="price_to" class="form-label">მდე</label>
+            <input type="number" class="form-control" id="price_to">
+        </div>
+        <div class="mb-3 col-md-4 ">
+           
+        <button type="submit" class="btn btn-primary mt-4">ძებნა</button>
+        </div>
+
+      </form>
+
+    <div class="row" id="prods">
+        
+    </div>
+</div>
+
+<span id="clock"></span>
+
+<!-- <button onclick="calculate()">ფასდაკლების გამოტანა</button> -->
    <script src="js/mine.js"></script>
 </body>
 </html>
