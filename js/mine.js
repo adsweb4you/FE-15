@@ -132,7 +132,7 @@ let teststring = "მე | ვარ ფრონტ | ენდ დეველ
 
 
 function upper(event){
-    console.log(event.path[0].offsetTop) 
+    // console.log(event.path[0].offsetTop) 
 }
 
 
@@ -276,7 +276,7 @@ let names = ["ანა", "ლანა", "სადსად"];
 let united = agess.concat(names);
 
 
-console.log(united);
+// console.log(united);
 
 // თუ 1 წევრი მაინც აკმაყოფილებს პირობას
 let checkage = agess.some((arr) => {
@@ -293,7 +293,7 @@ let fins = agess.find((arr) => {
     return arr > 10;
 })
 
-console.log(agess.sort(fil).reverse()) ;
+// console.log(agess.sort(fil).reverse()) ;
 
 function fil(a , b) {
     return a - b;
@@ -382,10 +382,105 @@ newdate.setDate(newdate.getDate() + 5);
 // }
 
 
-console.log(newdate.getDate())
+// console.log(newdate.getDate())
 
 
 // setInterval(() => {
 //      let time = new Date();
 //     document.getElementById("clock").innerHTML  = `${time.getDate()}/${time.getMonth() + 1}/${time.getFullYear()}| ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`;
 // }, 1000)
+
+ let ts = 25;
+ let ts1 = "23";
+ 
+
+ 
+if (ts > 30) {
+    // codi
+}else if(ts1 == "44"){
+    // codi
+}else if(ts1 == "23"){
+    //codi
+
+    console.log("asdsad")
+
+}else if(ts1 == "2123"){
+
+}else{
+    alert("ბოლო გაჩერება")
+}
+ 
+
+let mine = 2;
+
+switch (mine) {
+    case 2:
+        // 
+        console.log(1)
+        // 
+        break;
+
+        case "value1":
+            console.log(2)
+            break;
+
+            case "value3":
+                console.log(3)
+                break;
+
+                case "mines":
+                    console.log(4)
+                    break;
+
+                    case "value5":
+                        console.log(5)
+                        break;
+
+                        case "value6":
+                            console.log(6)
+                            break;
+
+    default:
+        console.log(":sd")
+        break;
+}
+
+ 
+ 
+
+let Products = [
+    {name:"დასახელება",
+     weight:[12,12,3,45,4345]
+    },
+    {name:"დასახელება1",
+    weight:[12,234,3445,4345,45]
+   },
+   {name:"დასახელება2",
+   weight:[12,234,3445,45,45]
+  },
+  {name:"დასახელება3",
+  weight:[12,234,3445,45,45]
+   }
+
+]
+
+
+
+Products.forEach((arr)=>{
+
+    // შევქმენი ცარიელი მასივი
+    let wesi = [];
+
+    arr.weight.forEach((we) => {
+        // ჩავწერე წონები ახალ მასივში
+       wesi.push("<p>"+we+"  კგ</p> ");
+
+    })
+      
+    // მასივის სტრინგი კოვერტაცია
+   let nws =  wesi.toString();
+ 
+
+    bloggs.innerHTML += `<div class="tst"> ${arr.name} ${nws.replaceAll(",", "")}  </div>`
+
+})
