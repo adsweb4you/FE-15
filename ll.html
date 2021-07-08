@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <style>
+            nav {
+                width: 100%;
+                height: 10vh;
+                border-bottom:1px solid grey ;
+            }
+            .user-round{
+               background-color: #0373fc;
+               width: 10%;
+                height: 50%;
+                border-radius: 50px;
+                display: inline-block;
+                position: absolute;
+            }
+            .line{
+               background-color:#192024;
+               width: 20%;
+                height: 20%;
+                display: inline-block;
+                position: absolute;
+                top: 12%;
+                left: 12%;
+            }
+            #user {
+                margin-left: 5%;
+                position: relative;
+                width: 500px;
+                height: 100px;
+            }
+            #right {
+                position: absolute;
+                width: 600px;
+                left:700px;
+                bottom: 520px;
+            }
+            #grey{
+                width: 0.5%;
+                height: 8vh;
+                background-color: grey;
+                display: inline-block;
+                margin-left: 5%;
+            }
+            #right a {
+                color: black;
+               font-size: 20px;
+            }
+            #right a:nth-child(3) {
+                color: blue;
+            }
+            .navigat {
+                background-color: #0373fc;
+                border-radius: 5px;
+                margin-left: 20px;
+                top: 10px;
+                font-size: 25px;
+                position: absolute;
+                color: white;
+            }
+            .switch {
+                position: absolute;
+                display: inline-block;
+                width: 60px;
+                height: 34px;
+                right: -20px;
+                top: 10px;
+            }
+            .switch input{
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ccc;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+                }
+
+                input:checked + .slider {
+                background-color: #c72e75;
+                }
+
+                input:focus + .slider {
+                box-shadow: 0 0 1px #c72e75;
+                }
+
+                input:checked + .slider:before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                    transform: translateX(26px);
+                    }
+
+
+                .slider.round {
+                border-radius: 34px;
+                }
+
+                .slider.round:before {
+                border-radius: 50%;
+                }
+                .container {
+                    margin-top: 10vh;
+                }
+                .w-100 {
+                    margin-top: 10vh;
+                }
+                .down {
+                    background-color: #0373fc;
+                border-radius: 5px;
+                font-size: 25px;
+                position: absolute;
+                color: white;
+                }
+                .learn {
+                    color: black;
+                    position: absolute;
+                    left: 180px;
+                    font-size: 20px;
+                    text-decoration: underline;
+                }
+                .towhite {
+                    color: white;
+                }
+                .black {
+                    background-color:rgb(23, 21, 21); ;
+                }
+                .topink {
+                    background-color: #c72e75;
+                }
+                .white-back {
+                    background-color: white;
+                }
+                .pinkpink {
+                    background-color: #c72e75;
+                }
+
+    </style>
+</head>
+<body>
+    
+<nav>
+          <div id="user">
+          <div class="user-round pink"></div>
+          <div class="line white"></div>
+          </div>
+          <div id="right">
+              <a href="" class="white">About</a>
+              <a href="" class="white">Solutions</a>
+              <a href="" class="piiiink">Resources</a>
+              <a href="" class="white">Pricing</a>
+              <a href="" class="white">Contact</a>
+              <div id="grey"></div>
+              <button class="navigat pink">Download</button>
+              <label class="switch">
+                  <input type="checkbox" id="check">
+                  <span class="slider round"></span>
+                </label>
+          </div>
+      </nav>
+      <main>
+          <div class="container">
+              <div class="row">
+                <div class="col">
+                    <p>This is a Label</p>
+                    <h1 class="white">Lorem ipsum dolor sit.</h1>
+                    <p class="white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda impedit debitis cumque ratione, molestias inventore modi facere quis in, eveniet quod deleniti officiis. </p>
+                    <button class="down pink">Download</button>
+                    <a href="" class="learn white">Learn more</a>
+                  </div>
+                <div class="col"><img src="https://wtwp.com/wp-content/uploads/2015/06/placeholder-image.png" alt="no photo"></div>
+                <div class="w-100"></div>
+                <div class="col"><img src="https://wtwp.com/wp-content/uploads/2015/06/placeholder-image.png" alt="no photo"></div>
+                <div class="col"> <p>This is a Label</p>
+                  <h1 class="white">Lorem ipsum dolor sit.</h1>
+                  <p class="white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda impedit debitis cumque ratione, molestias inventore modi facere quis in, eveniet quod deleniti officiis. </p>
+                  <button class="down pink">Download</button>
+                  <a href="" class="learn white" >Learn more</a></div>
+              </div>
+            </div>
+      </main>
+    <script>
+
+        let btn = document.querySelector("#check");
+        let body = document.querySelector("body");
+        let toWhite = document.querySelectorAll(".white");
+        let line = document.querySelector(".line");
+        let topink = document.querySelectorAll(".pink");
+        let changeColor = document.querySelector(".piiiink");
+
+       btn.onclick = function(){
+
+           body.classList.toggle("black"); 
+           for (let i = 0; i < toWhite.length; i++) {
+            toWhite[i].classList.toggle("towhite"); 
+           };
+           for (let a = 0; a < topink.length; a++) {
+            topink[a].classList.toggle("topink"); 
+           };
+           line.classList.toggle("white-back");
+           changeColor.classList.toggle("pinkpink");
+       }
+    </script>
+</body>
+</html>
+
+ 

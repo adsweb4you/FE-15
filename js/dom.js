@@ -161,3 +161,83 @@ for (let i = 0; i < removes.length; i++) {
 }
 
 });
+
+
+let myimg =  document.createElement('img');
+myimg.src = 'img/logo.png';
+myimg.classList.add('img-fluid');
+
+let p = document.createElement('p');
+p.textContent = "შექმნილი პ ტეგი";
+let mydiv = document.createElement('div');
+
+ mydiv.appendChild(p);
+ mydiv.appendChild(myimg);
+ 
+ out.appendChild(mydiv);
+
+
+
+
+
+//  დავალება
+
+let myform  = document.querySelector("#appendform");
+let myforminpu = document.querySelector("#content");
+myform.addEventListener("submit", function (e) {
+  e.preventDefault();
+  let ul  = document.createElement("ul");
+  let li  = document.createElement("li");
+ 
+  li.textContent = myforminpu.value;
+  ul.appendChild(li);
+  this.appendChild(ul);
+  delates();
+  });
+
+
+  // delete
+
+  function delates() { 
+
+ let liarr = document.querySelectorAll("li");
+  
+ liarr.forEach((els) => {
+  els.addEventListener("dblclick", function () { 
+    this.remove();
+   })
+ })
+
+   }
+
+
+
+
+ 
+
+
+let color = document.querySelector('.changecolor');
+
+
+color.addEventListener("click", function () {
+  let luarray  = document.querySelectorAll("#parentsul li")
+  let siblli = document.querySelector(".sibl");
+ if(siblli.previousElementSibling != null){
+  siblli.classList.remove('sibl');
+  siblli.previousElementSibling.classList.add("sibl")
+ } else{
+  luarray[luarray.length - 1].classList.add("sibl");
+  luarray[0].classList.remove("sibl");
+ }
+
+
+ 
+
+  })
+
+
+  let siblli = document.querySelector(".sibl");
+  let parul  = document.querySelector("#parentsul");
+  // siblli.parentNode.style.color = "red"
+
+ console.log(parul.children[1])

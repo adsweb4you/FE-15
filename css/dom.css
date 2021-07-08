@@ -157,6 +157,15 @@ body{
     transition: all .6s;
 }
 
+.sibl{
+    background-color: green;
+}
+
+.ecxter{
+    width: 450px;
+    margin: auto;
+}
+
 .sidenav{
     position: absolute;
     right: 0;
