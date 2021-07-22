@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.tabs{
+    width: 600px;
+    background-color: azure;
+    margin: auto;
+    border-radius: 3px;
+    box-shadow: 3px 3px 8px #000;
+    padding: 15px;
+}
+.tabs ul  li {
+    text-align: center;
+    padding: 0 25px;
+    display: inline-block;
+ 
+}
+.tabs ul  li:hover{
+
+    cursor: pointer;
+
+}
+
+li.active{
+    color: darkcyan;
+    border-bottom: 2px solid darkcyan;
+}
+
+.tabscontent{
+    display: none;
+}
+
+.tabscontent.active{
+    display: block;
+}
+
+.sad{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgb(131, 183, 243);
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="tabs">
+
+        <div class="tab-header">
+            <ul>
+                <li class="tabslist active" data-id="tab1">TAB 1</li>
+                <li class="tabslist" data-id="tab2">TAB 2</li>
+                <li class="tabslist" data-id="tab3">TAB 3</li>
+            </ul>
+        </div>
+         <label for="rem"> 
+          <input type="checkbox" name="" value="1" id="rem">
+         </label>
+
+        <!-- BODY -->
+        
+        <div class="tab-content">
+            <div class="tabscontent   active" id="tab1">
+                TAB 1 
+            </div>
+
+            <div class="tabscontent" id="tab2">
+                TAB 2
+            </div>
+
+            <div class="tabscontent" id="tab3">
+                TAB 3
+            </div>
+        </div>
+
+    </div>
+
+    
+    <script src="js/tab.js"></script>
+</body>
+</html>
