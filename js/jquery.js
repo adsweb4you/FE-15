@@ -18,207 +18,96 @@ $(function () {
 //     $('#myimg').fadeToggle('slow');
 // })
 
-$('.imngtog').on("click",function (e) {  
-    $('#myimg').css({
-        "border-radius":"50px",
-        "object-fit":"cover",
-        "width":"50%",
-    });
+let s = 0;
 
-$(".imngshow").click(function ( ) { 
+$(document).on("submit", ".myform", function (e) { 
+       e.preventDefault();
+    let  myname = $("#myname").val();
+    let  myemail = $("#myemail").val();
+    let  mytext = $("#mytext").val();
+
  
-    $('#myimg').css({
-        "border-radius":"",
-        "object-fit":"",
-        "width":"",
-    })
+    $('.list-inline').append(`
+ 
+  <li class="text-white list-inline-item d-flex justify-content-between mb-3 rounded p-3 bg-dark" 
+  data-id="${s}"
+  data-name="${myname}"
+  data-email="${myemail}"
+  data-text="${mytext}"
+  > <span class="chantext"> ${myname} </span>
+ <div class="d-flex ">
+  <button class="btn btn-success d-block ms-auto edit"    data-id="${s}"><i class="bi bi-pencil-square"></i> </button>
+  <button class="btn btn-danger d-block ms-auto delate"   data-id="${s}">   <i class="bi bi-x-circle-fill"> </i></button>
+  </div>
+  </li>
+ 
+    `)
+    s++;
+  
+    $('.myform')[0].reset();
+     
 });
- 
-})
 
-$(".login").click(function (e) { 
+// რედაქტირება (ჩასმა)
+$(document).on("click", ".edit", function (e) { 
     e.preventDefault();
-    $('#loginform').css({
-        'transform':'translateX(100%)',
-        'transition':'all .6s',
-    })
-
-    $('#registerform').css({
-        'transform':'translateX(0)',
-        'transition':'all .6s',
-    })
-
-});
-
-
-$(".regist").click(function (e) { 
-    e.preventDefault();
-    $('#loginform').css({
-        'transform':'translateX(0)',
-        'transition':'all .6s',
-    })
-
-    $('#registerform').css({
-        'transform':'translateX(-100%)',
-        'transition':'all .6s',
-    })
-
-});
-
-
-$(".animate p").on("click", function ( ) { 
- 
-    $(".animate").animate({
-        "width": "450px"
-    }, 7000 ,  function(){
-        $(".animate p:not(.hidecl)").slideUp("slow");
-        $(".hidecl").animate({
-            "height": "100%",
-            "overflow": "inherit",
-            "top": "0",
-        })
-    } )
-    
-});
-
-$(".stopanim").click(function ( ) { 
-    $(".animate").stop();
-    
-});
-
-let x = 0;
-
-$(".ser").click(function ( ) { 
-    
-    if (x == 0) {
-       
-    $(".form1").animate({
-        "width":"100%",
-        "border-radius":"3px",
-    }, 1000, function(){
-        $(".under").animate({
-            "width":"82%",
-        }, 1200);
-        
-     document.querySelector('.form1').setAttribute('placeholder', 'Search')
-    })
-
-    $(this).animate({
-        "right":0,
-    }, 1000)  
-    x = 1;
-    }else{ 
-      document.querySelector('.form1').setAttribute('placeholder', '')
-       
-      $(".under").animate({
-        "width":"0%",
-    }, 1200, function(){
-        $(".form1").animate({
-            "width":"20%",
-            "border-radius":"50px",
-        })
-
-        $(".ser").animate({
-            "right":"38%",
-        })  
-    });
-    x = 0;
-    }
-
-});
-
-
-$(document).click(function (e) { 
-    e.preventDefault();
-   // $(".cir").addClass('left'); //კლასის მინიჭება
-   //  $(".cir").removeClass('left'); //კლასის წაშლა
-  //  $(".cir").toggleClass('left'); // კლასის თოგლი(წაშლა/მინიჭება)
-  // $(".cir").hasClass('left') ამოწმებს თუ აქვს კონკრეტული კლასი 
-});
-
-let n = 0;
- 
-    $("#newinput").click(function (e) { 
-    e.preventDefault();
-
-    $('.append').prepend('<input type="text" class="form-control removeds  " value="'+n+'" name="" id="">')
-    n++;
-
- 
-
-});
-
- 
-$("#clear").click(function (e) { 
-    e.preventDefault();
-    $('.append').remove();
-    //$('.append').empty(); // შლის კონტენტს
-});
-
-// გახსნა
-$(document).on("click", '.removeds', function(){
-
-    let id = $(this).val();
-    $('.removed').attr('data-id', id);
-
-
-    $('.mymodal').animate({
-        height:"150px",
-    }, 600, function(){
-        $('.mymodal button').animate({
-            top:"55px"
-        })
-    })
-
- 
-})
-
-// დახურვა
-$('.close').click(function (e) { 
-    e.preventDefault();
-    $('.mymodal button').animate({
-       top:"150px"
-    }, 600, function(){
-        $('.mymodal').animate({
-             height:"0px",
-        })
-    })
-});
-
-
-//წაშლა
-
-$(document).on("click", ".removed", function (e) { 
-    e.preventDefault();
-    let id = $(this).attr('data-id')
- 
-
-    $("input[value='"+id+"']").animate({
-        height:"0px",
-        padding:"0px",
-        "margin-bottom":"0px",
-        opacity:"0"
-    }, 1000 , function(){
-        setTimeout(function(){
-              $("input[value='"+id+"']").remove();
-        }, 200)
-       
-    })
-
    
+    // ლისთის დეიტა ველიუები
+    let data = $("li[data-id="+$(this).attr('data-id')+"]")
 
 
+    // მნიშვნელობები
+    let  myname = data.attr('data-name');
+    let  myemail = data.attr('data-email');
+    let  mytext = data.attr('data-text');
+    
 
-    $('.mymodal button').animate({
-        top:"150px"
-     }, 600, function(){
-         $('.mymodal').animate({
-              height:"0px",
-         })
-     })
+//    ფორმის გადაკეთება განახლების ფორმად
+    $('.myform').removeClass('myform').addClass('updateform')
+
+    // ფორმაზე მნიშვნელობების მინიჭება
+    $("#myname").val(myname);
+    $("#myemail").val(myemail);
+    $("#mytext").val(mytext);
+
+    //იდ გაწერა
+    $('input[name="id"]').val($(this).attr('data-id'))
+ 
+
+    $("#send").text("რედაქტირება").removeClass('btn-success').addClass('btn-warning')
+
 });
+
+//რედაქტირება
+$(document).on('submit', '.updateform', function(e){
+    e.preventDefault();
+   //id წამოღება
+  let id =  $('input[name="id"]').attr('value');
+
+  // ლისთის დეიტა ველიუები
+  let data = $("li[data-id="+id+"]");
+
+  data.attr('data-name', $("#myname").val());
+  data.attr('data-email',  $("#myemail").val());
+  data.attr('data-text', $("#mytext").val());
+  $("li[data-id="+id+"] span").text($("#myname").val());
+  
+
+  //    ფორმის გადაკეთება განახლების ფორმად
+  $('.updateform').addClass('myform').removeClass('updateform')
+
+  $('.myform')[0].reset();
+  $("#send").text("გაგზავნმა").removeClass('btn-warning').addClass('btn-success')
+})
  
- 
+ //წაშლა
+
+ $(document).on("click", ".delate", function (e) { 
+     e.preventDefault();
+         // ლისთი 
+   $("li[data-id="+$(this).attr('data-id')+"]").remove();
+    
+ });
 })
 
  

@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Map</title>
+ </head>
+
+  <style>
+
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
+  </style>
+
+  <body>
+
+    <button class="rout">მიმართულების ჩვენება</button>
+
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCmykocAF_YPWQGZnU4VZHDBLgFTmNjUU&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+
+
+    <script>
+setInterval(function(){
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+getLocation();
+
+}, 1000)
+
+
+function showPosition(position) {
+  console.log(position.coords.latitude, position.coords.longitude)  
+ 
+}
+
+// Initialize and add the map
+function initMap() {
+
+    // let zoom  = localStorage.getItem('zoom')
+
+    // let x  = localStorage.getItem('x')
+    // let y  = localStorage.getItem('y')
+  // The location of Uluru
+  const coords = { lat: 41.716667, lng: 44.783334 };
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom:10,
+    center: coords,
+    
+  });
+
+
+  const tourStops = [
+    [{ lat: 34.8791806, lng: -111.8265049 }, "Boynton Pass"],
+    [{ lat: 34.8559195, lng: -111.7988186 }, "Airport Mesa"],
+    [{ lat: 34.832149, lng: -111.7695277 }, "Chapel of the Holy Cross"],
+    [{ lat: 34.823736, lng: -111.8001857 }, "Red Rock Crossing"],
+    [{ lat: 34.800326, lng: -111.7665047 }, "Bell Rock"],
+]
+ 
+
+ 
+
+// tourStops.forEach(([position, title], i) => {
+//     const marker = new google.maps.Marker({
+//       position,
+//       map,
+//       title: `${i + 1}. ${title}`,
+//       label: `${i + 1}`,
+//       optimized: false,
+//     });
+// })
+
+
+let bts = document.querySelector('.rout');
+
+
+bts.addEventListener('click', () => {
+    tourStops.forEach(([position, title], i) => {
+    const marker = new google.maps.Marker({
+      position,
+      map,
+      title: `${i + 1}. ${title}`,
+      label: `${i + 1}`,
+      optimized: false,
+    });
+})
+})
+//   // The marker, positioned at Uluru
+//   const marker = new google.maps.Marker({
+//     position: coords,
+//     map: map,
+//     // draggable:true,
+//     // title:"Drag me!"
+//   });
+
+ 
+
+//   const infowindow = new google.maps.InfoWindow({
+//     content: " ",
+//     position: coords,
+//   });
+//   infowindow.open(map);
+
+
+ 
+
+//   marker.addListener("dragend", () => {
+//  console.log(  marker.getPosition().lat(), marker.getPosition().lng()) ;
+ 
+//  localStorage.setItem('x',   marker.getPosition().lat())
+//  localStorage.setItem('y',   marker.getPosition().lng())
+//   });
+
+
+//   map.addListener("zoom_changed", () => {
+//     infowindow.setContent("Zoom: " + map.getZoom());
+
+//     localStorage.setItem('zoom',  map.getZoom())
+
+//   });
+}
+    </script>
+
+ 
+
+
+  </body>
+</html>

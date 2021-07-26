@@ -14,6 +14,8 @@ html{
     scroll-behavior: smooth;
 }
 
+li[data-id="1"]
+
 *{
     box-sizing: border-box;
 }
