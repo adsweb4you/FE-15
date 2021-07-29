@@ -151,6 +151,16 @@ console.log(sibl);
   
 // });
 
+$(".nextst").click(function (e) { 
+  e.preventDefault();
+  
+   $(".active").removeClass('active').parent().next().children().addClass('active  checked');
+
+  $(".show").removeClass('show').parent().next().children().addClass('show')
+  //$('.active').parent().prev().children().addClass('active', 'checked')
+//console.log( $('.active').parent().next().children());
+});
+
 })
 
  
