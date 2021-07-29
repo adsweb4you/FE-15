@@ -108,6 +108,49 @@ $(document).on('submit', '.updateform', function(e){
    $("li[data-id="+$(this).attr('data-id')+"]").remove();
     
  });
+
+
+
+
+// 
+
+// უშუალო მშობელი
+//let par = $('.mylists1').parent();
+
+// ყველა მშობელი  
+//let par = $('.mylists1').parents();
+
+// ყველა მშობელი  კონკრეტულ სელექტორამდე
+// let par = $('.mylists1').parentsUntil('body');
+
+// ზედა მეზობელი
+//let sibl =  $('.mylists1').prev();
+
+
+// ქვედა მეზობელი
+//  let sibl =  $('.active').next();
+
+  let sibl =  $('.mylists ul li').not('.active');
+
+sibl.css("color", "red")
+
+console.log(sibl);
+
+
+// $(".ls").click(function (e) { 
+//   e.preventDefault();
+
+//   if ($(this).attr('data-id') == 'up' ) {
+//     $('.active').removeClass('active').prev().addClass('active');
+//   }else{
+//     $('.active').removeClass('active').next().addClass('active');
+//   }
+
+  
+
+  
+// });
+
 })
 
  
